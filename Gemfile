@@ -32,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 
 gem 'clearance'
+
+#styling framework
+gem 'zurb-foundation', '~> 4.0.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
