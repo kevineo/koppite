@@ -33,6 +33,8 @@ gem 'figaro'
 
 gem 'clearance'
 
+gem 'socialization'
+
 #styling framework
 gem 'zurb-foundation', '~> 4.0.0'
 # Use Capistrano for deployment

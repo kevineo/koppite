@@ -15,6 +15,16 @@ Rails.application.routes.draw do
   get "/sign_up" => "clearance/users#new", as: "sign_up"
   resources :users
 
+  resources :users do
+  post 'follow',   to: 'socializations#follow'
+  post 'unfollow', to: 'socializations#unfollow'
+end
+
+resources :categories, only: [:index] do
+  post 'follow',   to: 'socializations#follow'
+  post 'unfollow', to: 'socializations#unfollow'
+end
+
   root "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

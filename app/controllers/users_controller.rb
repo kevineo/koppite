@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  #socialization
+  def follow
+    user = User.find(params[:id])
+    current_user.follow!(user) # => This assumes you have a variable current_user who is authenticated
+  end
   # GET /users
   # GET /users.json
   def index
